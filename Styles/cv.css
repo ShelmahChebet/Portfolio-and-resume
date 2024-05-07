@@ -1,0 +1,349 @@
+/* Importing CSS reset and Google Fonts */
+@import url(reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Varela&family=Varela+Round&display=swap');
+/* Setting font family*/
+:root{
+    font-family: "Varela", sans-serif;
+}
+/* Styling for the body */
+body{
+    /* Creating a grid layout with two columns */
+    display: grid;
+    grid-template-columns: auto 1fr;
+    /* Defining grid areas for sections */
+    grid-template-areas: 
+    "aside main"
+    "footer footer"
+    ;
+    /* Applying margin and background color */
+    margin: 2em;
+    background-color: #f5f5f5;
+}
+/* Styling for the main */
+main{
+    /* Adding padding to the left */
+    padding-left: 3em;
+    /* Specifying grid area */
+    grid-area: main;
+}
+/* Styling for the profile section */
+main #profile h1{
+    /* Adjusting padding, font size, weight, and color */
+    padding-top: 1em;
+    font-size: 2em;
+    font-weight: 600;
+    color: #1b2c2c;
+}
+main #profile{
+    /* Adding top green border*/
+    border-top: solid 0.2em #008000;
+    /* Adding padding*/
+    padding-bottom: 2em;
+    /* Adding top green border*/
+    border-bottom: solid 0.2em #008000;
+}
+/* Styling for paragraphs within the profile section */
+main #profile p{
+    /* Adjusting padding and color */
+    padding-top: 2em;
+    color: #5a5a5a;
+    padding-bottom: 2em;
+}
+/* Styling for lists within the profile section */
+main #profile ul {
+     /* Adjusting padding, list style, and color */
+    padding-left: 3em;
+    list-style-type: disc;
+    color: #5a5a5a;
+}
+/* Styling for list item markers within the profile section */
+main #profile li::marker{
+    /* Changing color */
+    color: green;
+}
+/* Styling for the education section */
+main #education h1{
+     /* Adjusting font size, weight, color, and padding */
+    font-size: 2em;
+    font-weight: 600;
+    color: #1b2c2c;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+main #education{
+    padding-bottom: 2em;
+}
+main #education div{
+    /*Making the first div a grid with two columns and two rows*/
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+main #education div h2{
+    /*Styling for h2*/
+    margin-right: 3em;
+    font-weight: 700;
+    font-size: 1.2em;
+    color: #008000;
+}
+main #education div h3{
+    /*Styling for h3*/
+    font-weight: 800;
+    font-size: 1.1em;
+    color: #1b2c2c;
+}
+main #education div p{
+    /*Styling for the paragraph*/
+    color: #5a5a5a;
+}
+main #education div hgroup{
+    padding-bottom: 2em;
+}
+/* Styling for the volunteer section */
+main #volunteer h1{
+    /* Adjusting font size, weight, color, and padding */
+    font-size: 2em;
+    font-weight: 600;
+    color: #1b2c2c;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+main #volunteer div{
+    /*Making the first div a grid with two columns and two rows*/
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+main #volunteer div h2{
+    /*Styling for h2*/
+    margin-right: 3em;
+    font-weight: 700;
+    font-size: 1.2em;
+    color: green;
+}
+main #volunteer div h3{
+    /*Styling for h3*/
+    font-weight: 800;
+    font-size: 1.1em;
+    color: rgb(27, 44, 44);
+}
+main #volunteer div p{
+    /*Styling for the paragraph*/
+    color: rgb(90, 90, 90);
+}
+main #volunteer div hgroup{
+    padding-bottom: 2em;
+}
+/* Styling for the skills section */
+main #skills h1{
+    /* Adjusting font size, weight, color, and padding */
+    font-size: 2em;
+    font-weight: 600;
+    color: rgb(27, 44, 44);
+    padding-top: 2em;
+    padding-bottom: 1em;
+}
+#skills table{
+    /*Styling the table*/
+    border-collapse: separate;
+    border-spacing: 5em 1.3em;
+}
+#skills table th{
+    /*Styling the table header*/
+    text-align: left;
+    font-weight: 700;
+    font-size: larger;
+}
+#skills table td{
+    /*Styling the table data*/
+    color: #008000;
+}
+/* Styling for the interests section */
+main #interest h1{
+    /* Adjusting font size, weight, color, and padding */
+    font-size: 2em;
+    font-weight: 600;
+    color: rgb(27, 44, 44);
+    padding-top: 2em;
+    padding-bottom: 1em;
+}
+main #interest ul{
+    /*Making the list a flex box*/
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    padding-bottom: 2em;
+}
+main #interest ul i{
+    /*Styling for the icons in the list*/
+    font-size: 2em;
+    color: green;
+    padding-bottom: 0.5em;
+    /*Adding a shadow*/
+    background-image: radial-gradient(40% 12.5% ellipse at center 80%, rgb(0 0 0 / .2), transparent);
+
+}
+/* Styling for the aside section */
+aside{
+    /* Specifying grid area */
+    grid-area: aside;
+    /* Adding padding */
+    padding-left: 1em;
+    background-color: #1b2c2c;
+    padding-left: 3em;
+    padding-right: 3em;
+     /* Adding flex properties */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+aside h1{
+    /* Adjusting font size, weight, color */
+    font-weight: 600;
+    font-size: 3em;
+    color: #76fd76;
+}
+aside h2{
+    /* Adjusting font size, weight, color */
+    padding-top: 1em;
+    font-size: 1.2em;
+    font-weight: lighter;
+    color: #f5f5f5;
+}
+aside img{
+    /* Adding green border at the top */
+    border-top: solid 0.3em green;
+
+}
+aside h3{
+    /* Adjusting font size, weight, color */
+    color: #76fd76;
+    padding-bottom: 1em;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+aside p{
+    /* Adjusting paragraph color */
+    color: #9C9C9C;
+}
+aside h4{
+    /* Adjusting color */
+    color: whitesmoke;
+}
+aside .nav a{
+    /* Styling navigation links */
+    text-decoration: none;
+    color: #9C9C9C;
+}
+aside .nav a:hover{
+    /* Changing link color on hover */
+    color: #76fd76;
+}
+aside .nav a:visited{
+    /* Adjusting visited link color */
+    color: #00B300;
+}
+aside .nav i{
+    /*Styling for icons*/
+    color: whitesmoke;
+    padding-bottom: 1em;
+    padding-top: 0.5em;
+}
+aside .nav p{
+    padding-bottom: 0.5em;
+}
+/* Styling for the footer */
+footer{
+     /* Specifying grid area */
+    grid-area: footer;
+    /* Centering text and adding padding */
+    text-align: center;
+    padding-top: 1em;
+}
+footer a{
+    /* Removing underline from links */
+    text-decoration: none;
+    /* Setting default link color */
+    color: #6E6E6E;
+}
+footer a:hover{
+     /* Changing link color on hover */
+    color: #028302;
+}
+footer a:visited{
+    /* Adjusting visited link color */
+    color: #006100;
+}
+/* Media query for dark mode */
+@media (prefers-color-scheme: dark) {
+    /* Dark mode colors */
+    body{
+        background-color: #5a5a5a;
+    }
+    main {
+        background-color: #333333;
+    }
+    main #profile h1{
+        color: #00BD00;
+    }
+    main #profile p{
+        color: #b8b8b8;
+    }
+    main #profile ul{
+        color: rgb(184, 184, 184);
+    }
+    main #education h1{
+        color: #00BD00;
+    }
+    main #volunteer h1{
+        color: #00BD00;
+    }
+    main #skills h1{
+        color: #00BD00;
+    }
+    main #interest h1{
+        color: #00BD00;
+    }
+    main #interest ul i{
+        color:rgb(184, 184, 184);
+    }
+    #skills table th{
+        color: rgb(184, 184, 184);
+    }
+    #skills table td{
+        color: #00B800;
+    }
+    main #interest ul h2{
+        color: #00B800;
+    }
+    main #education div h2{
+        color: #00B800;
+    }
+    main #education div h3{
+        color: #0DB50D;
+    }
+    main #education div p{
+        color: #b8b8b8;
+    }
+    main #volunteer div h2{
+        color: #00B800;
+    }
+    main #volunteer div h3{
+        color: #0DB50D;
+    }
+    main #volunteer div p{
+        color: rgb(184, 184, 184);
+    }
+    footer{
+        color: #D1D1D1;
+    }
+    footer a{
+        color: #D1D1D1;
+    }
+    footer a:hover{
+        color: #76fd76;
+    }
+    footer a:visited{
+        color: #00F500;
+    }
+}
